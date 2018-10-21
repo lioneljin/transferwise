@@ -115,14 +115,14 @@ function update(cities, connects) {
 let called = false;
 
 
-d3.json('/charity/front/data/transfers_cities_small.json', function (err, json2) {
+d3.json('data/transfers_cities_small.json', function (err, json2) {
     if (err) throw err;
     let cities = json2;
 
-    d3.json('/charity/front/data/transfers_w_group_small.json', function (err, links) {
+    d3.json('data/transfers_w_group_small.json', function (err, links) {
         if (err) throw err;
         let connects = links;
-        d3.json('/charity/front/data/world.geo.json', function(err, json3) {
+        d3.json('data/world.geo.json', function(err, json3) {
             if (err) throw err;
             geojson = json3;
             perform_updates(cities, connects);
