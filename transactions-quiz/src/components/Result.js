@@ -19,8 +19,9 @@ function Result(props) {
       </div>
       <hr />
       <div>
-        <img src={props.image} />
-        <p className="Text-center">{props.fact}</p>
+        <p className="Text-center">
+        <img src={props.image} height="250px" /><br />
+        {props.fact}</p>
       </div>
 
     </CSSTransitionGroup>
